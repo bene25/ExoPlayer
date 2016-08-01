@@ -12,13 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 14
         targetSdkVersion 23
     }
     buildTypes {
@@ -32,7 +31,15 @@ android {
         abortOnError false
     }
 }
-
 dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':library')
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.1.2'
+    compile 'com.burgstaller:okhttp-digest:1.6'
+}
+
+repositories {
+    jcenter()
 }

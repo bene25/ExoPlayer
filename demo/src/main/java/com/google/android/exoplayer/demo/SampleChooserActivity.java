@@ -128,6 +128,7 @@ public class SampleChooserActivity extends Activity {
                     } else {
                         String networkResponse = response.networkResponse().toString();
                         final String url = networkResponse.substring(networkResponse.lastIndexOf("url=") + 4, networkResponse.length() - 1) + "/stream.m3u8";
+                        Log.v("SASA", url);
                         new Handler(Looper.getMainLooper()).post(new Runnable() {
                             @Override
                             public void run() {

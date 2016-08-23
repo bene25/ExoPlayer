@@ -43,7 +43,6 @@ import java.util.Locale;
             this.uri = uri;
             this.type = type;
         }
-
     }
 
     public static final Sample[] YOUTUBE_DASH_MP4 = new Sample[]{
@@ -225,6 +224,8 @@ import java.util.Locale;
             new Sample("Apple ID3 metadata", "http://devimages.apple.com/samplecode/adDemo/ad.m3u8",
                     Util.TYPE_HLS),
             new Sample("LOL_TV_Test", "http://195.218.24.101:13888/SLIVE/169/2/",
+                    Util.TYPE_HLS),
+            new Sample("LOL_TV_Test", "http://195.218.24.101:13888/RECORD/169/2/04-08-2016_17:30:00/1000/",
                     Util.TYPE_HLS)
     };
 
